@@ -1,0 +1,77 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#root {
+    background-image: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+    /* margin: auto; */
+    /* background-color: blue; */
+}
+
+#todo {
+    width: 25%;
+    aspect-ratio: 4 / 6;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    padding: 10px 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#todo h1 {
+    font-weight: bolder;
+    font-size: 2vw;
+}
+
+#todo input {
+    border: 1px solid #ccc;
+    outline: none;
+
+    opacity: 0.8;
+}
+
+
+.todo {
+    animation: fadein 0.2s;
+
+    outline: none;
+    border: none;
+    background-color: rgb(248, 248, 248);
+    border-radius: 2px;
+    fill: rgb(41, 41, 41);
+
+    cursor: pointer;
+}
+.todo--delete {
+    animation: fadeout 0.2s;
+}
+
+#todo input, .todo {
+    font-size: 1.5vw;
+    margin: 0.1em 0px;
+    padding: 0.5em 1em;
+}
+
+#todos {
+    padding: 1vh 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
